@@ -42,4 +42,39 @@ const questions = [
         choices: ["Circle", "Square", "Triangle"],
     }
 ];
-function writeToFile(fileName, data)
+function writeToFile(fileName, data) {
+    console.log("Writing [" + data + "] to file [" + fileName +"]")
+    filesystem.writeToFile(fileName, data , function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log(" COngrats, you've generated a SVG Logo!!")
+    });
+}
+
+async function init() {
+    console.log("Starting init");
+    var svgString = "";
+    var svg_file = "logo.svg";
+
+    const answers = await inquirer.prompt(questions);
+
+var user_text = "";
+if (answers.text.length > 0 && answers.text.lenght < 4) {
+    user_text = answers.text
+} else {
+    console.log("Invalid user text field detected! Please enter 1-3 Characters");
+    return;
+}
+console.log("Users text: [" + user_text + "]");
+
+user_font_color = answers["text-color"];
+console.log("User font color: [" + user_font_color + "]");
+
+user_shape_color = answers.shape;
+console.log("User shape color: [" + user_shape_color + "]");
+
+user_shape_type = answers["pixel-image"];
+console.log("User entered shape = [" + user_shape_type + "]");
+}
+
