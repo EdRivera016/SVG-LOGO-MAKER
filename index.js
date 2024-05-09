@@ -78,3 +78,33 @@ user_shape_type = answers["pixel-image"];
 console.log("User entered shape = [" + user_shape_type + "]");
 }
 
+let user_shape;
+if(user_shape_type === "Square" || user_shape_type === "square") {
+    user_shape = new Square();
+    console.log("User selected Square shape");
+}
+else if (user_shape_type === "Circle" || user_shape_type === "circle") {
+    user_shape = new Circle();
+    console.log("User selected Circle shape");
+}
+else if (user_shape_type === "Triangle" || user_shape_type === "triangle") {
+    user_shape = new Triangle();
+    console.log("User selected Triangle shape");
+}
+else {
+    console.log("Invalid shape!");
+}
+    user_shape.setColor(user_shape_color);
+
+var svg = new Svg();
+svg.setTextElement(user_text, user_shape_color);
+svg.setShapeElement(user_shape);
+svgString = svg.render();
+
+console.log("Displayin shape:\n\n" + svgString);
+console.log("Shape generation complete!");
+console.log("Writing shape to file...");
+
+writeToFile(svg_file, svgString);
+} 
+init()
