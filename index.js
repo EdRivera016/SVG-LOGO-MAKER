@@ -8,7 +8,7 @@ class Svg{
         this.shapeElement = ''
     }
     render () {
-return `svg version="1.1 xmlns = "http://www.w3.org/2000/svg" width="300" height="200">${this.shapeElement}${this.textElement}</svg>`
+return `svg version="1.1" xmlns = "http://www.w3.org/2000/svg" width="300" height="200">${this.shapeElement}${this.textElement}</svg>`
     }
     setTextElement(text,color) {
         this.textElement = `<text x="150" y="250" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
@@ -44,11 +44,11 @@ const questions = [
 ];
 function writeToFile(fileName, data) {
     console.log("Writing [" + data + "] to file [" + fileName +"]")
-    filesystem.writeToFile(fileName, data , function (err) {
+    fs.writeToFile(fileName, data , function (err) {
         if (err) {
             return console.log(err);
         }
-        console.log(" COngrats, you've generated a SVG Logo!!")
+        console.log(" Congrats, you've generated a SVG Logo!!")
     });
 }
 
@@ -60,7 +60,7 @@ async function init() {
     const answers = await inquirer.prompt(questions);
 
 var user_text = "";
-if (answers.text.length > 0 && answers.text.lenght < 4) {
+if (answers.text.length > 0 && answers.text.length < 4) {
     user_text = answers.text
 } else {
     console.log("Invalid user text field detected! Please enter 1-3 Characters");
@@ -76,7 +76,7 @@ console.log("User shape color: [" + user_shape_color + "]");
 
 user_shape_type = answers["pixel-image"];
 console.log("User entered shape = [" + user_shape_type + "]");
-}
+
 
 let user_shape;
 if(user_shape_type === "Square" || user_shape_type === "square") {
