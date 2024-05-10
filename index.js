@@ -1,4 +1,4 @@
-const filesystem = require('./node_modules/graceful-fs/graceful-fs')
+const fs = require('./node_modules/graceful-fs/graceful-fs')
 const inquirer = require("inquirer")
 const {Circle, Square, Triangle} = require("./lib/shapes");
 
@@ -8,13 +8,13 @@ class Svg{
         this.shapeElement = ''
     }
     render () {
-return `svg version="1.1" xmlns = "http://www.w3.org/2000/svg" width="300" height="200">${this.shapeElement}${this.textElement}</svg>`
+return `<svg version="1.1" xmlns = "http://www.w3.org/2000/svg" width="300" height="200">${this.shapeElement}${this.textElement}</svg>`
     }
     setTextElement(text,color) {
         this.textElement = `<text x="150" y="250" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
     }
     setShapeElement(shape) {
-this.shapeElement = shape.render()
+this.shapeElement = shape;
     }
 }
 
@@ -42,9 +42,9 @@ const questions = [
         choices: ["Circle", "Square", "Triangle"],
     }
 ];
-function writeToFile(fileName, data) {
+function writeFile(fileName, data) {
     console.log("Writing [" + data + "] to file [" + fileName +"]")
-    fs.writeToFile(fileName, data , function (err) {
+    fs.writeFile(fileName, data , function (err) {
         if (err) {
             return console.log(err);
         }
@@ -82,29 +82,28 @@ let user_shape;
 if(user_shape_type === "Square" || user_shape_type === "square") {
     user_shape = new Square();
     console.log("User selected Square shape");
-}
-else if (user_shape_type === "Circle" || user_shape_type === "circle") {
+} else if (user_shape_type === "Circle" || user_shape_type === "circle") {
     user_shape = new Circle();
     console.log("User selected Circle shape");
-}
-else if (user_shape_type === "Triangle" || user_shape_type === "triangle") {
+} else if (user_shape_type === "Triangle" || user_shape_type === "triangle") {
     user_shape = new Triangle();
     console.log("User selected Triangle shape");
-}
-else {
+} else {
     console.log("Invalid shape!");
 }
-    user_shape.setColor(user_shape_color);
+
+user_shape.setColor(user_shape_color);
 
 var svg = new Svg();
-svg.setTextElement(user_text, user_shape_color);
+svg.setTextElement(user_text, user_font_color);
 svg.setShapeElement(user_shape);
+
 svgString = svg.render();
 
 console.log("Displayin shape:\n\n" + svgString);
 console.log("Shape generation complete!");
 console.log("Writing shape to file...");
 
-writeToFile(svg_file, svgString);
-} 
+writeFile(svg_file, svgString);
+}
 init()
