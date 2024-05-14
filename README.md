@@ -24,11 +24,11 @@ https://drive.google.com/file/d/18F8aOHM0LWG59PulBswYJ9KfKxhI94Av/view
 ## Screenshots
 Examples Of Generated Logos:
 
-![Screenshot](<Screenshot 2024-05-13 232624.png>)
+![Screenshot](<Screenshot%202024-05-13 232624.png>)
 
-![Screenshot](<Screenshot 2024-05-13 232630.png>)
+![Screenshot](<Screenshot%202024-05-13 232630.png>)
 
-![Screenshot](<Screenshot 2024-05-13 232638.png>)
+![Screenshot](<Screenshot%202024-05-13 232638.png>)
 
 ## Technologies Used
 Node.js, Inquirer@8.2.4, File System Module, Jest
