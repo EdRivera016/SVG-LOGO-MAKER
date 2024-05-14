@@ -21,9 +21,12 @@ This SVG logo maker is a powerful command-line tool that empowers freelance web 
 ## Live Screen Recording 
 
 ## Screenshots
-Examples Of Generated Logos
+Examples Of Generated Logos:
+
 ![Screenshot](<Screenshot 2024-05-13 232624.png>)
+
 ![Screenshot](<Screenshot 2024-05-13 232630.png>)
+
 ![Screenshot](<Screenshot 2024-05-13 232638.png>)
 
 ## Technologies Used
