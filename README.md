@@ -19,6 +19,7 @@
 This SVG logo maker is a powerful command-line tool that empowers freelance web developers to effortlessly crate custom logos for theirs projects. With a user-friendly interface powered by Inquirer, developers can input up to three characters, choose text and shape colors and select from a variety of shapes including circles,triangles and squares. The application leverges Object-Oriented Programming(OOP) principles to efficiently generate SVG files named logo.svg, providing a seamless experience for developers.
 
 ## Live Screen Recording 
+https://drive.google.com/file/d/18F8aOHM0LWG59PulBswYJ9KfKxhI94Av/view
 
 ## Screenshots
 Examples Of Generated Logos:
@@ -44,7 +45,7 @@ The SVG Logo Maker application code utilizes Node.js, Inquirer, and the File Sys
 
 ## Testing 
 To do unit testings, open terminal and use the command npm test.
- screenshotof vs code here
+![Testing](<Screenshot 2024-05-13 233608.png>)
 
 ## License 
 NOTICE: This application is covered under the MIT License
