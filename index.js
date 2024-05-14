@@ -53,14 +53,14 @@ function promptUser() {
       {
         type: "input",
         message:
-          "Enter up to three characters!!",
+          "Enter up to three characters:",
         name: "text",
       },
       // Text color prompt
       {
         type: "input",
         message:
-          "Enter text color keyword OR a hexadecimal number!!",
+          "Enter text color keyword OR a hexadecimal number:",
         name: "textColor",
       },
       // Shape choice prompt
@@ -74,7 +74,7 @@ function promptUser() {
       {
         type: "input",
         message:
-          "Enter background color keyword OR a hexadecimal number!!",
+          "Enter background color keyword OR a hexadecimal number:",
         name: "shapeBackgroundColor",
       },
     ])

@@ -6,7 +6,18 @@
   "devDependencies": {
     "jest": "^29.7.0"
   },
-"scripts": {
+  "scripts": {
     "test": "jest"
-  }
+  },
+  "name": "svg-logo-maker",
+  "description": "This SVG logo maker is a powerful command-line tool that empowers freelance web developers to effortlessly crate custom logos for theirs projects. With a user-friendly interface powered by Inquirer, developers can input up to three characters, choose text and shape colors and select from a variety of shapes including circles,triangles and squares. The application leverges Object-Oriented Programming(OOP) principles to efficiently generate SVG files named logo.svg, providing a seamless experience for developers.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
