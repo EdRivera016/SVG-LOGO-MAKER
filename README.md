@@ -23,8 +23,11 @@ https://drive.google.com/file/d/18F8aOHM0LWG59PulBswYJ9KfKxhI94Av/view
 
 ## Screenshots
 Examples Of Generated Logos:
+
 ![Screenshots](lib/img/ExampleLogoSvg.png)
+
 ![Screenshots](lib/img/ExampleLogoSvg2.png)
+
 ![Screenshots](lib/img/ExampleLogoSvg3.png)
 
 ## Technologies Used
